@@ -2,7 +2,7 @@
 set -xeuo pipefail
 export VAULT_ADDR=http://127.0.0.1:8200
 
-echo 'path "secret/web_app" { capabilities = [ "read" ] }' | vault policy write app_runner -
+vault policy write app_runner policy_basic.hcl
 
 vault policy list
 
