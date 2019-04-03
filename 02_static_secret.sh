@@ -1,7 +1,5 @@
-#!/usr/bin/env bash
-set -xeuo pipefail
+#!/usr/bin/env bash -xeuo pipefail
 export VAULT_ADDR=http://127.0.0.1:8200
+export VAULT_TOKEN=root
 
-vault kv put secret/web_app db_username=foo db_password=bar
-
-vault kv get secret/web_app
+vault kv put secret/signup DB_USERNAME=foo DB_PASSWORD=bar
